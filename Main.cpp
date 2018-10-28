@@ -32,7 +32,7 @@ int main()
 	for (size_t i = 0;i < platforms.size();i++) {
 
 		std::vector<cl::Device> devices;
-		platforms[i].getDevices(CL_DEVICE_TYPE_CPU, &devices);
+		platforms[i].getDevices(CL_DEVICE_TYPE_GPU, &devices);
 		if (devices.size() == 0) continue;
 
 		for (size_t n = 0;n < devices.size();n++) {
